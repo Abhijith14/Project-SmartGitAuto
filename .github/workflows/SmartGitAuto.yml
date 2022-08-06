@@ -26,5 +26,5 @@ jobs:
         pip install -r requirements.txt
     - name: execute py script # run main.py
       env:
-          SOME_SECRET: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: python main.py
