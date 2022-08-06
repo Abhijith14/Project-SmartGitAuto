@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-g = Github(os.getenv("ACCESS_TOKEN"))
+g = Github(os.environ("ACCESS_TOKEN"))
 current_user = g.get_user()
 
 print(current_user.login)
