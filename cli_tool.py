@@ -31,13 +31,13 @@ def get_project_name(file_path='.git/config'):
     return purl[1].split('/')[-1]
 
 
-def get_current_branch(file_path='.git/FETCH_HEAD'):
+def get_current_branch(file_path='.git/HEAD'):
     pconfig = open(file=file_path, mode='r')
     ret_data = []
     for data in pconfig:
         ret_data.append(remove_symbols(data))
-    ret_data = ret_data[0].split("'")
-    return ret_data[1]
+    ret_data = ret_data[0].split("/")
+    return ret_data[-1][:-1]
 
 
 def get_project_version(file_path='.git/logs/refs/heads/'):
