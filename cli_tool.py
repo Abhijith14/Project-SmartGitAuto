@@ -1,7 +1,7 @@
 import os
 import re
 import time
-import requests
+# import requests
 
 project_dir = os.listdir('.')
 types = ['Script/Python', 'Script/Web', 'Script', 'Website(PHP)', 'Website(Django)', 'Website', 'Computer Vision', 'Machine Learning', 'Automation']
@@ -196,31 +196,31 @@ def getData():
         print("This folder is not a git workspace. Initialise git and rerun the script !")
 
 
-def create_gitignore():
-    url = "https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/.gitignore"
-    resp = requests.get(url)
-    gitignore_filew = open('.gitignore', 'w')
-    gitignore_filew.write(resp.text)
-    gitignore_filew.close()
-
-
-def create_license(license="GPL3"):
-    if license == "GPL3":
-        url = "https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/LICENSE"
-
-    if url:
-        resp = requests.get(url)
-        gitl_filew = open('LICENSE', 'w')
-        gitl_filew.write(resp.text)
-        gitl_filew.close()
-    else:
-        print("URL Retrieval Failed !!")
+# def create_gitignore():
+#     url = "https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/.gitignore"
+#     resp = requests.get(url)
+#     gitignore_filew = open('.gitignore', 'w')
+#     gitignore_filew.write(resp.text)
+#     gitignore_filew.close()
+#
+#
+# def create_license(license="GPL3"):
+#     if license == "GPL3":
+#         url = "https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/LICENSE"
+#
+#     if url:
+#         resp = requests.get(url)
+#         gitl_filew = open('LICENSE', 'w')
+#         gitl_filew.write(resp.text)
+#         gitl_filew.close()
+#     else:
+#         print("URL Retrieval Failed !!")
 
 
 def main():
     getData()
-    create_gitignore()
-    create_license()
+    # create_gitignore()
+    # create_license()
 
 
 
