@@ -1,6 +1,0 @@
-project: 
-	name: Project-SmartGitAuto 
-	description: Project-SmartGitAuto 
-	version: 1.8.0
-	branch: master
-	type: Automation
