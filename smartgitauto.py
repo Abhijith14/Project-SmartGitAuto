@@ -19,8 +19,8 @@ def create_readme(NAME, VERSION, LINK, TYPE):
     PROJECT_NAME, PROJECT_VERSION, PROJECT_LINK, PROJECT_TYPE, PROJECT_LOGO = NAME, VERSION, LINK, TYPE, "assets/logo.png"
     readme_file_content = ""
     # heading
-    with open('readme_samples/heading.md', 'r', encoding="utf-8") as f:
-        text = f.read()
+    with requests.get('https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/readme_samples/heading.md') as f:
+        text = f.text
         text = text.replace('{{PROJECT_NAME}}', PROJECT_NAME)
         text = text.replace('{{PROJECT_LOGO}}', PROJECT_LOGO)
         text = text.replace('{{PROJECT_VERSION}}', PROJECT_VERSION)
@@ -30,30 +30,30 @@ def create_readme(NAME, VERSION, LINK, TYPE):
     readme_file_content = readme_file_content + text + "\n\n<br>\n"
 
     if PROJECT_TYPE in python_list:
-        with open('readme_samples/python-env.md', 'r', encoding="utf-8") as f:
-            text = f.read()
+        with requests.get('https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/readme_samples/python-env.md') as f:
+            text = f.text
 
         readme_file_content = readme_file_content + text + "\n\n<br>\n\n"
 
     # Todo: run
 
     # project assistance
-    with open('readme_samples/project-assistance.md', 'r', encoding="utf-8") as f:
-        text = f.read()
+    with requests.get('https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/readme_samples/project-assistance.md') as f:
+        text = f.text
         text = text.replace('{{PROJECT_NAME}}', PROJECT_NAME)
         text = text.replace('{{PROJECT_LINK}}', PROJECT_LINK)
 
     readme_file_content = readme_file_content + text + "\n\n<br>\n\n"
 
     # BUILD AND AUTHOR
-    with open('readme_samples/build_with_and_authors.md', 'r', encoding="utf-8") as f:
-        text = f.read()
+    with requests.get('https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/readme_samples/build_with_and_authors.md') as f:
+        text = f.text
 
     readme_file_content = readme_file_content + text + "\n\n<br>\n\n"
 
     # PLAGARISM
-    with open('readme_samples/plagarism.md', 'r', encoding="utf-8") as f:
-        text = f.read()
+    with requests.get('https://raw.githubusercontent.com/Abhijith14/Project-SmartGitAuto/master/readme_samples/plagarism.md') as f:
+        text = f.text
         text = text.replace('{{PROJECT_NAME}}', PROJECT_NAME)
         text = text.replace('{{PROJECT_LINK}}', PROJECT_LINK)
 
