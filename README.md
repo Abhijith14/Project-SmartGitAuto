@@ -83,8 +83,6 @@ Together, we can make this project **better** every day! 😘
 ### ❤️ Authors
 
 - **Abhijith Udayakumar** - *Design & Development* - [Abhijith14](https://github.com/Abhijith14)
-- **Devanand A** - *Design & Development* - [DevAnand-A](https://github.com/DevAnand-A)
-- **Akhiljith K** - *Design & Development* - [Akhiljithk](https://github.com/Akhiljithk)
 
 <br>
 
