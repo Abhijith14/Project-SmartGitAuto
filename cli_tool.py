@@ -36,12 +36,14 @@ def get_current_branch(file_path='.git/FETCH_HEAD'):
     ret_data = []
     for data in pconfig:
         ret_data.append(remove_symbols(data))
+    print(ret_data)
     ret_data = ret_data[0].split("'")
     return ret_data[1]
 
 
 def get_project_version(file_path='.git/logs/refs/heads/'):
     curr_branch = get_current_branch()
+    print(curr_branch)
     pconfig = open(file=file_path+str(curr_branch))
     ret_data = []
     for data in pconfig:
